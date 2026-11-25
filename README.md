@@ -1,7 +1,16 @@
 # Ambigüedad estructural y números de Catalan
 
 *«Vi al hombre con el telescopio»* tiene dos lecturas: el telescopio lo tengo yo, o lo tiene el hombre.
+
+![Las dos lecturas de «vi al hombre con el telescopio»](arboles_telescopio.png)
+
 Si añadimos más sintagmas preposicionales (*en el parque*, *con la bufanda*…), el número de análisis no crece poco a poco: **se dispara siguiendo los números de Catalan**.
+
+Con un solo SP más, *«vi al hombre con el telescopio en el parque»*, ya hay cinco árboles posibles:
+
+![Los cinco análisis de «vi al hombre con el telescopio en el parque»](arboles_5.png)
+
+Y a partir de ahí:
 
 | Sintagmas preposicionales | Análisis posibles |
 |---:|---:|
@@ -25,12 +34,18 @@ Si añadimos más sintagmas preposicionales (*en el parque*, *con la bufanda*…
   ```
 
 - Un parser **CKY** construye todos los árboles posibles y comprueba que su número coincide con el número de Catalan *C(n+1)* para *n* sintagmas preposicionales.
-- `grafico.py` genera la figura.
+- `grafico.py` genera el gráfico de crecimiento.
+- `arboles.py` dibuja los árboles: las dos lecturas del telescopio y los cinco análisis con dos SP.
+
+Así se ve al ejecutarlo:
+
+![Salida de ambiguedad.py](terminal.png)
 
 ```bash
 pip install matplotlib
 python ambiguedad.py
 python grafico.py
+python arboles.py
 ```
 
 ## Por qué Catalan
